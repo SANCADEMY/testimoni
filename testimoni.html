@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Gallery</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Style */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #FFB6C1, #FF6347); /* Gradient Background */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar Button Style */
+    .navbar-button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #ca8a2b;
+      border: 2px solid #FF6347;
+      border-radius: 15px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Zoom and Glow Effect */
+    .navbar-button:hover {
+      transform: scale(1.1); /* Zoom effect */
+      box-shadow: 0 0 10px rgba(255, 99, 71, 0.8); /* Glow effect */
+      background-color: #FF4500; /* Darker red background on hover */
+      border-color: #FF4500; /* Change border color */
+    }
+
+    .navbar-button:active {
+      background-color: #FF4500; /* Background color when clicked */
+      border-color: #FF4500;
+      box-shadow: 0 0 15px rgba(255, 99, 71, 1);
+    }
+
+    /* Positioning the button */
+    .navbar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Style */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #FFB6C1, #FF6347); /* Gradient Background */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Title Styling */
+    h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    /* Photo Container Styling */
+    .photo-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      background: #fff;
+    }
+
+    .photo-container:hover {
+      transform: scale(1.05);
+    }
+
+    /* Photo Image */
+    .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .photo-container:active .photo {
+      filter: blur(5px);
+    }
+
+    /* Testimonial Text Box */
+    .testimonial-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      box-sizing: border-box;
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-text textarea {
+      width: 90%;
+      height: 60px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      resize: none;
+      outline: none;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .testimonial-text textarea::placeholder {
+      color: white;
+      opacity: 0.8;
+    }
+
+    /* Hover Effect for Testimonial Text */
+    .photo-container:hover .testimonial-text {
+      opacity: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .testimonial-text textarea {
+        width: 85%;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar with the Button -->
+  <div class="navbar">
+    <a href="your-link-here.html" class="navbar-button">Return</a>
+  </div>
+
+  <div class="container">
+    <h1>Testimonial Gallery</h1>
+    <div class="gallery">
+      <!-- Photo Block 1 -->
+      <div class="photo-container">
+        <img src="photo1.jpg" alt="Testimonial 1" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 2 -->
+      <div class="photo-container">
+        <img src="photo2.jpg" alt="Testimonial 2" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 3 -->
+      <div class="photo-container">
+        <img src="photo3.jpg" alt="Testimonial 3" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 4 -->
+      <div class="photo-container">
+        <img src="photo4.jpg" alt="Testimonial 4" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 5 -->
+      <div class="photo-container">
+        <img src="photo5.jpg" alt="Testimonial 5" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 6 -->
+      <div class="photo-container">
+        <img src="photo6.jpg" alt="Testimonial 6" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 7 -->
+      <div class="photo-container">
+        <img src="photo7.jpg" alt="Testimonial 7" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 8 -->
+      <div class="photo-container">
+        <img src="photo8.jpg" alt="Testimonial 8" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 9 -->
+      <div class="photo-container">
+        <img src="photo9.jpg" alt="Testimonial 9" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 10 -->
+      <div class="photo-container">
+        <img src="photo10.jpg" alt="Testimonial 10" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 11 -->
+      <div class="photo-container">
+        <img src="photo11.jpg" alt="Testimonial 11" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 12 -->
+      <div class="photo-container">
+        <img src="photo12.jpg" alt="Testimonial 12" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 13 -->
+      <div class="photo-container">
+        <img src="photo13.jpg" alt="Testimonial 13" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 14 -->
+      <div class="photo-container">
+        <img src="photo14.jpg" alt="Testimonial 14" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 15 -->
+      <div class="photo-container">
+        <img src="photo15.jpg" alt="Testimonial 15" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 16 -->
+      <div class="photo-container">
+        <img src="photo16.jpg" alt="Testimonial 16" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 17 -->
+      <div class="photo-container">
+        <img src="photo17.jpg" alt="Testimonial 17" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 18 -->
+      <div class="photo-container">
+        <img src="photo18.jpg" alt="Testimonial 18" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 19 -->
+      <div class="photo-container">
+        <img src="photo19.jpg" alt="Testimonial 19" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 20 -->
+      <div class="photo-container">
+        <img src="photo20.jpg" alt="Testimonial 20" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 21 -->
+      <div class="photo-container">
+        <img src="photo21.jpg" alt="Testimonial 21" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 22 -->
+      <div class="photo-container">
+        <img src="photo22.jpg" alt="Testimonial 22" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 23 -->
+      <div class="photo-container">
+        <img src="photo23.jpg" alt="Testimonial 23" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 24 -->
+      <div class="photo-container">
+        <img src="photo24.jpg" alt="Testimonial 24" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Block 25 -->
+      <div class="photo-container">
+        <img src="photo25.jpg" alt="Testimonial 25" class="photo">
+        <div class="testimonial-text">
+          <textarea placeholder="Write your testimonial here..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
